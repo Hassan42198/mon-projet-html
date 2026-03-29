@@ -85,32 +85,30 @@
             position: fixed;
             top: 50%; left: 50%; transform: translate(-50%, -50%);
             text-align: center;
-            width: 95%; /* Kbert l-width dial l-ecran kamel */
+            width: 95%; 
             max-width: 500px; 
             z-index: 1000;
-            padding: 10px;
         }
 
-        /* CADRE MASTILI O KBIR */
         .photo-container {
             position: relative;
             display: inline-block;
             padding: 10px;
-            background: #fff; /* Style Polaroid kbir */
+            background: #fff;
             border-radius: 4px;
             box-shadow: 0 15px 50px rgba(0,0,0,0.8);
             margin-bottom: 20px;
+            width: 100%;
             animation: scaleIn 0.8s ease-out;
-            width: 100%; /* I-ched l-3ard dial t-lifon */
         }
 
         .photo-frame {
             width: 100%;
             display: block;
-            border: 2px solid #eee;
-            object-fit: contain; /* Bach t-ban l-photo kamla bla ma t-9te3 */
-            max-height: 65vh; /* Ta7ed l-toul dialha 3la 7asab l-ecran */
-            border-radius: 2px;
+            object-fit: contain;
+            max-height: 60vh;
+            image-rendering: -webkit-optimize-contrast;
+            image-rendering: high-quality;
         }
 
         @keyframes scaleIn {
@@ -128,12 +126,12 @@
 
         .romantic-msg {
             color: #fceabb;
-            font-size: 0.95rem; /* Sghert l-ktiba chwiya bach mat-ch-dch blasa kbira */
-            line-height: 1.5;
-            background: rgba(0, 0, 0, 0.5);
-            padding: 15px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 20px;
             border-radius: 15px;
-            border-top: 2px solid #d4af37;
+            border-top: 3px solid #d4af37;
             font-style: italic;
             box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
@@ -151,7 +149,7 @@
 
     <div id="final-screen">
         <div class="photo-container">
-            <img src="https://i.ibb.co/svgs6BPT/together.jpg" alt="Together" class="photo-frame">
+            <img src="https://i.ibb.co/sdvy03Zj/together.jpg" alt="Together" class="photo-frame">
         </div>
         <div class="final-text">I Love You! ❤️</div>
         <div class="romantic-msg">
@@ -167,7 +165,7 @@
             const icons = ['🌹', '✨', '❤️', '💖'];
             sparkle.innerHTML = icons[Math.floor(Math.random() * icons.length)];
             sparkle.style.left = Math.random() * 100 + 'vw';
-            sparkle.style.animationDuration = Math.random() * 3 + 4 + 's';
+            sparkle.style.animationDuration = Math.random() * 4 + 4 + 's';
             document.body.appendChild(sparkle);
             setTimeout(() => { sparkle.remove(); }, 6000);
         }
